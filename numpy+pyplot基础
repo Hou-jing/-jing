@@ -14,3 +14,95 @@ y3=np.tan(x)
 plt.plot(x,y1,'bo--')#颜色+点+线条
 plt.plot(x,y2,'r.:')
 plt.show()
+
+import matplotlib.pyplot as plt
+import numpy as np
+x=np.arange(0,2*np.pi,0.1)
+#y1=16*np.square(np.sin(x))*np.sin(x)
+y1=16*np.power(np.sin(x),3)#power用来求几次方
+y2=13*np.cos(x)-5*np.cos(2*x)-2*np.cos(3*x)-np.cos(4*x)
+plt.plot(x,y1,'ro--',label='line1')
+plt.plot(x,y2,'r+--',label='line2')
+plt.legend()
+plt.show()
+
+import matplotlib.font_manager as fm
+import numpy
+import numpy as np
+import matplotlib.pyplot as plt
+plt.rcParams['font.family'] = ['SimHei']
+import csv
+f=open('收盘价.csv','w')
+csv_writer=csv.writer(f)
+data=[[172.63,168.49,44.36],[162.54,183.03,43.05],[164.85,182.45,46.28],[166.23,185.57,49.74],[110.00,149.26,41.79],
+[117.36,169.45,45.21],
+[111.70,173.11,47.21],
+[104.47,175.03,41.64],
+[102.76,167.23,42.33],
+[101.85,176.67,41.13],
+[118.53,200.00,42.54],
+[126.40,212.10,48.15]]
+csv_writer.writerows(data)
+
+df=np.genfromtxt('收盘价2.csv',delimiter=',')
+x=np.arange(1,13,1)
+y1=df[:,0]
+print(y1)
+y2=df[:,1]
+y3=df[:,2]
+plt.plot(x,y1,'bo--',label='百度')
+plt.plot(x,y2,'r+--',label='阿里巴巴')
+plt.plot(x,y3,'g.--',label='腾讯')
+plt.xlabel('月份')
+plt.ylabel('销售额')
+
+#柱状图
+name=['bask','pingpong','ballon']
+label=[17,13,12]
+plt.bar(name,label,width=0.5)
+plt.show()
+#并排柱状图
+times = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+# 蒸发量
+data1 = [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+# 降水量
+data2 = [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+
+x = np.arange(12)
+width = 0.3
+plt.bar(x-width/2,data1,width=width,label='data1')
+plt.bar(x+width/2,data2,width=width,label='data2')
+plt.xticks(x,times)
+plt.show()
+#堆叠柱形图
+plt.bar(x,data1,width=0.6,label='data1',color='blue')
+plt.bar(x,data2,bottom=data1,color='r',label='data2',width=0.6)
+plt.show()
+
+#饼状图
+data=[5723.34,24789.32,13893.23]
+labels=['第一产业','第二产业','第三产业']
+explode=(0.1,0,0)#表示突出显示部分
+plt.pie(data,explode,autopct='%0.1f%%')#一部分是 %0.1f 表示保留一位小数，同理 %0.2f 表示保留两位小数。
+#另一部分是 %%，其实它就表示输出一个 %，因为 % 还字符串格式化输出中有特殊的含义，所以想要输出 % 就得写成 %%。所以，'%0.1f%%' 的含义是保留一位小数的百分数，例如：53.3%
+plt.show()
+
+data = [59428036, 263535521, 484750032, 185402141, 68608795, 45625173, 4138550]
+labels = ['没上过学', '小学', '初中', '高中', '大学专科', '大学本科', '研究生']
+plt.pie(data,labels=labels,autopct='%0.1f%%')
+plt.show()
+
+x=np.arange(0,6,0.1)
+y1=np.sin(x)
+y2=np.cos(x)
+y3=np.tan(x)
+ax1=plt.subplot(2,2,1)
+ax1.plot(x,y1)
+ax2=plt.subplot(2,2,2)
+ax3=plt.subplot(2,1,2)
+ax2.plot(x,y2)
+ax3.plot(x,y3)
+ax1.set_title('sinx')
+ax2.set_title('cosx')
+ax3.set_title('tanx')
+plt.show()
