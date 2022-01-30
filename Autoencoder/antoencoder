@@ -1,0 +1,5 @@
+encoder-----decoder
+encoder作用是吧输入生成一个序列
+decoder是把序列还原为原来的内容
+如果，train中没有出现过，则在decoder中生成的loss会比较大
+可以用于异常检测（是self suprevised question,给定的数据集是正常的normal,需要judge出abnormal的example）
