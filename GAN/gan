@@ -1,0 +1,6 @@
+对抗式生成网络
+一个是generator,一个是descrimitor
+产生器和解码器（暂时描述为这个吧）是相互制约的，一般gan比较难train，一是由于objective function不好设计，另一个是由于两个是要相互match
+
+unconditional 和condition的GAN
+GAN当然也有许多的变形。。。WGAN。。。
