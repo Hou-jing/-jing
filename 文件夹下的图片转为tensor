@@ -1,0 +1,22 @@
+import torch
+import torchvision.transforms as transforms
+import cv2 as cv
+file_path= './test/0/'
+transf2 = transforms.Compose(
+  [
+
+    transforms.ToTensor(),
+    transforms.Resize((128,128)),
+    transforms.Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5))
+
+  ]
+)
+imgs_tensor=[]
+for i in range(3):#图片的数量
+  img = cv.imread('./test/0/'+'000{}.jpg'.format(i))
+  img_tensor2 = transf2(img)
+  print(img_tensor2.shape)
+  imgs_tensor.append(img_tensor2.tolist())
+
+imgs_tensor=torch.tensor(imgs_tensor)
+print(type(imgs_tensor),imgs_tensor.size())
