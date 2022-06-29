@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.container{
+	width: 100%;
+	height: 40px;
+	background-color: #333333;
+}
+.contentBox{
+	width: 1224px;
+	margin:0 auto;
+	overflow: hidden; /*清除浮动*/
+}
+a{
+	text-decoration: none;
+	color:#A4B0B0;
+	font-size:12px;
+}
+a:hover{
+	color:#FFFFFF;
+}
+ul{
+	list-style: none;
+}
+.conLeft{
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+}
+.conRight{
+	float: right;
+	height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+}
+.conLeft li{
+	float: left;
+	margin-right: 17px;
+}
+.conRight li{
+	float: left;
+	margin-right: 15px;
+}

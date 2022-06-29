@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">
+		具有id的元素
+	</div>
+	<div class="container">
+		具有class类名的元素
+	</div>
+
+	<p>p标签元素</p>
+</body>
+<script>
+	//通过id获取元素
+	var box = document.getElementById('box')
+	console.log(box)
+
+	//通过class类名获取元素
+	var containers = document.getElementsByClassName('container')
+	console.log(containers)
+
+
+	// 通过标签获取元素
+	var ps = document.getElementsByTagName('p')
+	console.log(ps[0])
+</script>
+</html>

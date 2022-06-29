@@ -1,0 +1,36 @@
+.news{
+	margin-left: 50px;
+}
+.news #list{
+	list-style: none;
+}
+.news #list li{
+	border-bottom: 3px solid #ccc;
+	position: relative;
+}
+li>div{
+	display: inline-block;
+}
+li h3{
+	color:orange;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+
+li>div:before{
+	content:'';
+	width:80px;
+	height: 42px;
+	background: url('https://n1-q.mafengwo.net/s9/M00/FB/0C/wKgBs1diFRKAMMptAAAIpExA3RM367.png');
+	position: absolute;
+	top:0;
+	right:50px;
+}
+.news #list li p:nth-of-type(2){
+	color:gold;
+}
+#list li:nth-child(2){
+	border-bottom: none;
+}

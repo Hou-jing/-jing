@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			font-size:30px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box" style="color:red">div容器</div>
+</body>
+<script>
+	//找元素
+	var box = document.getElementById('box')
+
+	// 获取行内样式
+	console.log(box.style.color)
+	console.log(box.style.fontSize)
+
+	// 获取内部样式表，外部样式中的样式
+	console.log(window.getComputedStyle(box)['fontSize'])
+	console.log(window.getComputedStyle(box)['color'])
+
+
+	// 设置样式
+	box.style.color = 'green'
+	box.style.fontSize = '60px'
+</script>
+</html>

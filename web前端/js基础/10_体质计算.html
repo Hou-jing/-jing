@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container{
+			width:600px;
+			padding:30px 20px;
+			margin:20px auto;
+			border: 1px solid #000;
+		}
+		.container span{
+			display: inline-block;
+			width:200px;
+			height: 30px;
+			text-align: right;
+		}
+		.container .res{
+			text-align: left;
+		}
+		.container input{
+			width:300px;
+			height: 30px;
+		}
+		#btn{
+			width:100px;
+			height: 40px;
+			border:none;
+			background-color: orange;
+			color:#fff;
+			font-size:24px;
+			display: block;
+			margin: 10px auto;
+			cursor: pointer;
+		}
+		.data{
+			margin-top:20px;
+			border-top:1px solid #000;
+			padding-top:10px;
+		}
+		#result{
+			height: 30px;
+			background-repeat: no-repeat;
+			background-size: 30px 30px;
+			padding-left: 35px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p>
+			<span>体重：</span>
+			<input type="text" placeholder="请输入体重，单位kg" id="tz" >
+		</p>
+		<p>
+			<span>身高：</span>
+			<input type="text" placeholder="请输入身高，单位m" id="ht">
+		</p>
+		<p>
+			<button id="btn">计算</button>
+		</p>
+		<div class="data">
+			<span class="res">计算结果：</span>
+			<p id="result"></p>
+		</div>
+	</div>
+</body>
+<script src="tizhi.js"></script>
+</html>

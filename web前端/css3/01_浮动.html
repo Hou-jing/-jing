@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			padding:20px;
+			border:1px solid #000;
+			margin-bottom: 10px;
+		}
+		span{
+			border: 1px solid #000;
+		}
+		.first,.second,.three{
+			padding:10px;
+			float:left;
+			width:300px;
+		}
+		.four{
+			float: right;
+			width:200px;
+			height: 100px;
+		}
+		.box{
+			width:1200px;
+			margin:10px auto 0;
+			height: 400px;
+		}
+		.five{
+			float: left;
+		}
+		.five_parent{
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="first">first</div>
+		<div class="second">second</div>
+		<div class="three">three</div>
+		<span class="four">行内元素</span>
+	</div>
+	<div class="box">
+		<div class="five_parent">
+			<div class="five">five</div>
+			<div class="five">five</div>
+			<div class="five">five</div>
+		</div>
+		<!-- <p style="clear: both;"></p> -->
+		<div>没有浮动的元素</div>
+	</div>
+</body>
+</html>

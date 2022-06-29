@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box {
+			font-size:40px;
+			color:rgb(0,255,0);
+		}
+
+		.box2{
+			font-size:35px;
+			color:#ff0000;
+		}
+	</style>
+
+	<!-- 通过link标签把外部样式表引入 -->
+	<link rel="stylesheet" href="style.css" >
+</head>
+<body>
+	<div style="font-size:30px; color:red;">行内样式表</div>
+
+	<!-- 内部样式表 -->
+	<div class='box'>内部样式表</div>
+	<div class="box2">内部样式表</div>
+
+	<!-- 外部样式表 -->
+	<div class="box3">外部样式表</div>
+</body>
+</html>

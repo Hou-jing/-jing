@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width:600px;
+			height: 400px;
+			margin-bottom: 20px;
+			border: 1px solid #000;
+			position: relative;
+		}
+		.tf{
+			width: 100px;
+			height: 100px;
+			border: 1px solid #000;
+			/*转换*/
+			transform: translate(50px,100px);
+			transform: rotate(30deg);
+		}
+		.ts{
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+			transition: all 2s linear 0s;
+		}
+		.ts:hover{
+			width: 300px;
+			height: 400px;
+		}
+		.ami{
+			width:100px;
+			height: 100px;
+			border: 1px solid green;
+			position: absolute;
+			top:0;
+			left:0;
+			animation: cricle 5s linear 1s infinite;
+		}
+
+		@keyframes cricle{
+			from {
+				top:0;
+				left:0;
+			}
+			25%{
+				top:0;
+				left: 500px;
+			}
+			50%{
+				top:300px;
+				left: 500px;
+			}
+			75%{
+				top:300px;
+				left: 0;
+			}
+			to{
+				top:0;
+				left: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- 转换 -->
+	<div class="box">
+		<div class='tf'></div>
+	</div>
+
+	<!-- 过渡 -->
+	<div class="box">
+		<div class="ts"></div>
+	</div>
+
+	<!-- 动画 -->
+	<div class="box">
+		<div class="ami"></div>
+	</div>
+</body>
+</html>

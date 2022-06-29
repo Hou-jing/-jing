@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">
+		id为box的div
+	</div>
+
+	用户名：<input type="text" id="username"  >
+	<textarea name="" id="info" cols="30" rows="10"></textarea>
+	<button id="btn">点我</button>
+</body>
+<script>
+	//找到标签
+	var box = document.getElementById('box')
+	// 获取标签中的值
+	var box_content = box.innerHTML
+	console.log(box_content)
+
+	// 获取Input标签
+	var username = document.getElementById('username')
+	var info = document.getElementById('info')
+	var username_content = username.value
+	console.log(username_content)
+
+	var btn = document.getElementById('btn')
+	btn.onclick = function(){
+		username_content = username.value
+		info_content = info.value
+		console.log(username_content,info_content)
+	}
+
+
+	// 设置值
+	box.innerHTML = 'div标签中新的值'
+
+	username.value = 'input标签中新的值'
+
+	info.innerHTML = 'textarea文本域标签中新的值'
+</script>
+</html>

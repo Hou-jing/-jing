@@ -1,0 +1,97 @@
+*{
+	margin: 0;
+	padding: 0;
+}//清除默认效果
+#shangou{
+	width:100%;
+	padding:40px 0;
+	background-color: #F5F5F5;
+}
+.container{
+	width:1224px;
+	margin:0 auto;
+	height: 1000px;
+}
+//上下0,左右auto居中
+.head{
+	margin-bottom: 20px;
+
+}
+.content{
+	height: 1000px;
+}
+
+//content .子集prodcut_box，inline-block显示在一行
+.content .product_box{
+	display: inline-block;
+	vertical-align: top;
+	width:235px;
+	height: 340px;
+	background-color: #fff;
+	text-align: center;
+	margin-right: 5px;
+}
+
+.content>div:nth-child(1){
+	background-color: #F1EDED;
+}
+.product_box .time{
+	color:#EF3A3B;
+	margin-top:62px;
+	font-size:20px;
+	margin-bottom: 32px;
+	font-weight: bold;
+}
+.product_box .txt{
+	margin-top: 35px;
+	margin-bottom: 32px;
+}
+.product_box .hour{
+	width: 48px;
+	height: 48px;
+	background-color: #605751;
+	color:#fff;
+	font-size:24px;
+	display: inline-block;
+	font-weight: bold;
+	text-align: center;
+	line-height: 48px;
+}
+.product_box .mao{
+	font-size:24px;
+	font-weight: bold;
+	color:rgba(0,0,0,0.5);
+}
+.product_box .djs{
+	margin-bottom: 30px;
+}
+.shan{
+	border-top:1px solid #E53935;
+}
+.tv{
+	margin-right: 0;
+}
+
+.product_box .pic1{
+	width: 160px;
+	height: 160px;
+	margin-top:20px;
+	margin-bottom: 23px;
+}
+.product_box .product_info{
+	font-size:14px;
+	font-weight: 400;
+}
+.product_box .product_td{
+	color:#B2B2B2;
+	font-size:14px;
+	margin-top:3px;
+	margin-bottom: 12px;
+}
+.product_box .now_price{
+	color:#FA721E;
+}
+.product_box .old_price{
+	color:#ADADAD;
+	text-decoration: line-through;
+}

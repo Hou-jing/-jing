@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var str = 'abcdefghijklmnopqrstuvwxyz1234567890';
+	var yzm = ''
+	// 生成普通四位数验证码
+	for(var i=0; i<4; i++){
+		//找下标
+		var num = null;
+		num = parseInt(Math.random() * str.length)
+		yzm+=str[num]
+	}
+	console.log(yzm)
+
+	// 生成不重复的验证码
+	var strlen = 0
+	var obj = {}
+	var yzm2 = ''
+	while(strlen<4){
+		var num2 = null;
+		num = parseInt(Math.random() * str.length)
+		//保存下标，对象中没有这个下标，保存这个下标
+		if(!obj[num]){
+			obj[num] = 1
+			strlen++
+			yzm2+=str[num]
+		}
+	}
+
+	console.log(yzm2)
+</script>
+</html>
